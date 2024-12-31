@@ -1,0 +1,31 @@
+﻿@* @model IEnumerable<PersonalManagementApp.Models.Employee>
+
+<h2>Çalışan Listesi</h2>
+
+<a asp-action="Create">Yeni Çalışan Ekle</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Pozisyon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+              
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+@{
+    ViewData["Title"] = "LeaveMvc - Index";
+}
+
+<h1>Leave Mvc Index Page</h1>
